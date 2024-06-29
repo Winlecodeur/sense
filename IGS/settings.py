@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-04q)pd5(@7)j1+g@(8)(ym3=-ltell%s6w$)5wfi$w=emn@4-g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
+DEBUG = False
 
-ALLOWED_HOSTS = ['igetsense.onrender.com', 'www.igetsense.onrender.com']
+ALLOWED_HOSTS = ['.onrender.com']
 
 
 # Application definition
