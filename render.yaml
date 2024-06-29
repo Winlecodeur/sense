@@ -2,4 +2,4 @@ services:
   - name: web
     env: python
     build_command: pip install -r requirements.txt
-    start_command: gunicorn nom_de_votre_projet.wsgi --bind 0.0.0.0:$PORT
+    start_command: gunicorn IGS.wsgi --bind 0.0.0.0:$PORT
