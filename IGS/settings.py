@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-04q)pd5(@7)j1+g@(8)(ym3=-ltell%s6w$)5wfi$w=emn@4-g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = os.environ.get('DEBUG','False') == True
 
-ALLOWED_HOSTS = ["onrender.com"]
+ALLOWED_HOSTS = ['igetsense.onrender.com', 'www.igetsense.onrender.com']
 
 
 # Application definition
@@ -123,7 +123,13 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES = [os.path.join(BASE_DIR, 'static')]
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+<<<<<<< HEAD
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+=======
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+>>>>>>> dd043457eb249d17b79dcb87460f92dcb450577e
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
