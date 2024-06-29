@@ -1,0 +1,92 @@
+.medias form {
+    box-shadow: 0 0 20px rgb(64, 12, 185);
+    width: 600px;
+    height: 300px;
+    font-size: 40px;
+    color: aliceblue;
+    border-radius: 30px;
+    color: rgb(64, 12, 185);
+    padding-top: 3%;
+}
+.medias form button{
+    padding: 15px 235px;
+    margin-left: 4%;
+    color: rgb(64, 12, 185);
+    font-size: 15px;
+    border-radius: 25px;
+    border: rgb(64, 12, 185) solid 2px;
+}
+.p {
+    font-size: 40px;
+    margin-left: 20%;
+    font-weight: 1000;
+    color: rgb(64, 12, 185);
+}
+.medias  span {
+    font-size: 25px;
+    margin-left: 2%;
+}
+.medias {
+    margin-left: 25%;
+}
+.medias h1 {
+    color:  rgb(64, 12, 185);
+    margin-left:17%;
+    font-size: 45px;
+     }
+body {
+    background-color: rgb(220, 230, 230);
+}
+.foooterahref {
+    margin-left: 30%;
+    font-size: 25px;
+}
+.footer {
+    display: flex;
+}
+.img{
+    width: 30px;
+    height: 30px;
+    
+}
+.img:hover{
+    transform: scale(2);
+}
+.href{
+    margin: 0 1%;
+}
+@media (max-width:946px){
+    .medias form{
+        padding-top: 15%;
+        font-size: 35px;
+        width: 450px;
+        height: 300px;
+        border-radius: 30px;
+    }
+    .medias{
+        margin-left: 3%;
+        margin-top:0%;
+    }
+
+    .medias form button {
+        padding: 15px 160px;
+        margin-top: 5%;
+       
+
+    }
+    .footer{
+        margin-top: 5%;
+    }
+    .foooterahref {
+        margin-left: 20%;
+    }
+    .p {
+        font-size: 40px;
+        margin-left: 30%;
+        font-weight: 1000;
+    }
+    .medias  span {
+        font-size: 16px;
+        margin-left: 0%;
+    }
+}

@@ -1,0 +1,18 @@
+.medias form {
+    font-size: 25px;
+}
+.medias form button {
+    padding: 15px 210px;
+    background-color: rgb(64, 12, 185);
+    color: aliceblue;
+    border-radius: 35px;
+}
+@media (max-width:946px){
+    .medias form {
+        font-size: 20px;
+    }
+    .medias form button {             
+        font-size: 15px;
+        padding: 15px 120px;
+    }
+}
