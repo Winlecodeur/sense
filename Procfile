@@ -1,1 +1,2 @@
-web: gunicorn igs.wsgi --log-file - 
+web: gunicorn
+igs.wsgi 
