@@ -1,0 +1,30 @@
+<!DOCTYPE html>{% load static %}
+<html>
+    <head>
+        <title>Profil </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+        <meta name="viewport" content="width=device-width" initial-scale="1.O">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <h1>welcome {{user.username}} {{user.first_name}} </h1>
+            <div class="a">
+                <a href="{% url 'home' %}">voir l'Accueil </a>
+                <a href="{% url 'edit_profil' %}">+ edition du profil </a>
+            </div>
+        </header>
+        <div class="medias">
+            <div class="media">
+               
+                <img src="{{user.profil.image.url}}">
+            <div class="bio">
+                <p>  {{user.profil.bio}}</p><br>
+               <span class="spa"> Sujet :</span>
+                <span>  {{user.profil.sujet}}</span>
+            </div>
+           
+            </div>
+        </div>
+    </body>
+</html>

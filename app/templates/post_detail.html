@@ -1,0 +1,29 @@
+<!DOCTYPE html>{% load static %}
+<html>
+    <head>
+        <title>post_detail</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'post_detail.css' %}">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+
+    </head>
+    <body>
+        <div class="medias">
+            <div class="media" id="media">
+                <img src="{{examen.image.url}}">
+                <h1> {{examen.titre}} </h1>
+                <p> {{examen.sujet}}  {{examen.serie}}  {{examen.annee}}</p>
+                <a href="{{examen.fichier.url}}" download="{{examen.fichier.url}}" class="a">telecharger</a>
+               </div>
+        <div class="recommendation">
+            <h1>Que vous pourriez aimer</h1>
+            {% for examen in recommendation %}
+          <a href="{% url 'post_detail' examen.pk  %}">
+            <p class="p">  <img src="{{examen.image.url}}">
+                {{examen.titre}} {{examen.sujet}} {{examen.serie}} {{examen.annee}}  </p>
+                
+          </a>
+            {% endfor %}
+        </div>
+    </div>
+    </body>
+</html>

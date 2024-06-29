@@ -1,0 +1,63 @@
+<!DOCTYPE html>{% load static %}
+<html>
+    <head>
+        <title>se connecter </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/hom.css' %}">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    </head>
+    <body>
+        <header>
+            
+            <div class="logo">
+            <span>igetsense</span>
+            </div>
+            <div class="search">
+                <form method="get" action="{% url 'search' %}">
+                    <input type="text" placeholder="ex.anglais" title="search" name="q" value="{{query}}">
+                    <button type="submit">recherche</button>
+                </form>
+                <a href="{% url 'profile' %}" title="mon compte"><img src="{% static 'img/accompte.jpg' %}" class="ima"></a>
+            </div>
+            <div class="toggles"></div>
+
+            <ul class="menu">
+                <li><a href="#texte">Accueil</a></li>
+                <li><a href="#media">sujet</a></li>
+                <li><a href="#contact">contacts</a></li>
+            </ul>
+        </header>
+        <div class="tete" id="texte" >
+            <img src="{% static 'img/plan-vertical-homme-noir-serieux-expression-reflechie-vetu-pull-rouge-pointe-index-au-plafond_273609-24459.jpg' %}">
+ <p><strong>BIENVENUE SUR IGETSENSE</strong> <br> VOTRE PLATEFORME DE TELECHARMENTS EDUCATIVES PREFEREES</p>
+
+        </div>
+        <h1 class="h1">Vos sujets "{{request.user.profil.sujet}}" </h1>
+        <div class="medias">
+           
+            {% for examen in posts %}
+           <div class="media" id="media">
+            <a href="{% url 'post_detail' examen.pk %}" class="lien">
+                <img src="{{examen.image.url}}">
+                <h1> {{examen.titre}} </h1>
+                <p> {{examen.sujet}}  {{examen.serie}}  {{examen.annee}}</p>
+                <a href="{{examen.fichier.url}}" download="{{examen.fichier.url}}" class="ref">telecharger</a><br>
+            </a>
+           </div>
+            {% endfor %}
+        </div>
+                <div class="footer" id="contact">
+            <a href=""><img src="{% static 'img/733547.png' %}" class="img"></a>
+            <a href=""><img src="{% static 'img/3670051.png' %}" class="img"></a>
+            <a href=""><img src="{% static 'img/8299667.png' '%}" class="img"></a>
+            <p>copyright created by win alfani for igetsense <br> tout droit reservés, created on 2024</p>
+        </div>
+    </body>
+    <script>
+        var small_menu = document.querySelector('.toggles')
+        var menu = document.querySelector('.menu')
+        small_menu.onclick = function (){
+            small_menu.classList.toggle('active')
+            menu.classList.toggle('responsive')
+        }
+    </script>
+</html>

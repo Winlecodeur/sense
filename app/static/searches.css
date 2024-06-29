@@ -1,0 +1,39 @@
+.medias {
+    margin-top: 10%;
+    position: absolute;
+    display:grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 50px;
+}
+.media img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-left: 25%;
+}
+.media{
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    box-shadow: 0 0 8px black;
+    background-color: aliceblue;
+    margin-left: 50%;
+}
+.media a {
+    padding:15px 85px;
+    margin-left: 8%;
+    background-color:rgb(64, 12, 185) ;
+    border-radius: 15px 15px;
+    color: aliceblue;
+    text-decoration: none;
+
+}
+.media  a:hover{
+    letter-spacing: 1px;
+}
+.media h1 {
+    font-size: 20px;
+}
+body{
+    background-color: aqua;
+}

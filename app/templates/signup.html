@@ -1,0 +1,28 @@
+<!DOCTYPE html>{% load static %}
+<html>
+    <head>
+        <title>s'inscrire </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+
+    </head>
+    <body>
+        <div class="medias">
+            <h1 class="p">igetsense</h1>
+           <span class="span">votre plateforme de telechargements educatifs preférées</span>
+            <h1 class="h1">S'inscrire</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit">s'inscrire</button>
+            </form>
+        </div>
+        <div class="footer">
+            <a href="" class="href"><img src="{% static 'img/733547.png' %}" class="img"></a>
+            <a href="" class="href"><img src="{% static 'img/3670051.png' %}" class="img"></a>
+            <a href="" class="href"><img src="{% static 'img/8299667.png' '%}" class="img"></a>
+            <a href="{% url  'login' %}" class="foooterahref">se connecter</a>
+        </div>
+    </body>
+</html>

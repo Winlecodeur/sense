@@ -1,0 +1,19 @@
+<!DOCTYPE html>{% load static %}
+<html>
+    <head>
+        <title>editer le profil </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'edit.css' %}">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+
+    </head>
+    <body>
+        <div class="medias">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{form.as_p}}
+                {{user_form.as_p}}
+                <button type="submit">mettre à jour le profil </button>
+            </form>
+        </div>
+    </body>
+</html>

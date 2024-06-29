@@ -1,0 +1,34 @@
+<!DOCTYPE html>{% load static %}
+<html>
+    <head>
+        <title>recherche</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'recherche.css' %}">
+        <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    </head>
+    <body>
+        <header>
+            <form method="get" action="{% url 'search' %}">
+                <input type="text" placeholder="ex.anglais" title="search" name="q" value="{{query}}">
+                <button type="submit">recherche</button>
+            </form>
+
+        </header>
+        <h1 class="h1"> Resultat pour "{{query}}"</h1>
+        <div class="medias">
+            {% if resultats %}
+            {% for examen in resultats %}
+            <div class="media" id="media">
+            <a href="{% url 'post_detail' examen.pk %}" class="ref">
+                    <img src="{{examen.image.url}}">
+                    <h1> {{examen.titre}} </h1>
+                    <p> {{examen.sujet}}  {{examen.serie}}  {{examen.annee}}</p>
+                    <a href="{{examen.fichier.url}}" download="{{examen.fichier.url}}" class="a">telecharger</a>
+            </a>
+        </div>
+               {% endfor %}
+            {% else %}
+            aucun reesulat 
+            {% endif %}
+        </div>
+    </body>
+</html>

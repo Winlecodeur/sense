@@ -1,0 +1,49 @@
+.medias {
+    display: flex;
+    justify-content: space-between;
+}
+.media img{
+    width: 500px;
+    height: 400px;
+}
+.recommendation img {
+    width: 40px;
+    height: 40px;
+}
+.recommendation{
+    display: block;
+
+}
+.recommendation a {
+    text-decoration: none;
+    width: 300px;
+    height: 80px;
+    color: black;
+   
+}
+.p {
+    box-shadow: 0 0 10px rgb(64, 12, 185);
+}
+.a {
+    background-color: rgb(64, 12, 185);
+    padding: 15px 220px;
+    border-radius: 35px;
+    color: aliceblue;
+    text-decoration: none;
+}
+@media (max-width:946px){
+    .media img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .medias {
+        display: block;
+    }
+    .a {
+        padding: 15px 120px;
+    }
+    .recommendation{
+        margin-top: 10%;
+    }
+}
