@@ -1,7 +1,7 @@
 <!DOCTYPE html>{% load static %}
 <html>
     <head>
-        <title>se connecter </title>
+        <title>Accueil </title>
         <link rel="stylesheet" type="text/css" href="{% static 'css/hom.css' %}">
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
     </head>
@@ -14,7 +14,7 @@
             <div class="search">
                 <form method="get" action="{% url 'search' %}">
                     <input type="text" placeholder="ex.anglais" title="search" name="q" value="{{query}}">
-                    <button type="submit">recherche</button>
+                    <button type="submit"><img src="staticfiles/admin/img/search.svg"></button>
                 </form>
                 <a href="{% url 'profile' %}" title="mon compte"><img src="{% static 'img/accompte.jpg' %}" class="ima"></a>
             </div>
