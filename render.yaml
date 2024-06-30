@@ -1,5 +1,29 @@
 services:
-  - name: web
+  - type: web
+    name: django-web-service
     env: python
-    build_command: pip install -r requirements.txt
-    start_command: gunicorn IGS.wsgi --bind 0.0.0.0:$PORT
+    plan: free
+    buildCommand: 
+      - pip install -r requirements.txt
+      - python manage.py collectstatic --noinput
+      - python manage.py migrate
+    startCommand: gunicorn your_project_name.wsgi:application
+    envVars:
+      - key: DEBUG
+        value: 'False'
+      - key: ALLOWED_HOSTS
+        value: 'your-domain.onrender.com'
+      - key: DATABASE_URL
+        fromDatabase:
+          name: your-database
+          property: connectionString
+      - key: SECRET_KEY
+        fromVault: your-vault/your-secret-key
+    staticPublishPath: staticfiles
+    routes:
+      - type: rewrite
+        source: /media/(.*)
+        destination: /media/$1
+    disks:
+      - name: media-disk
+        mountPath: /var/media
