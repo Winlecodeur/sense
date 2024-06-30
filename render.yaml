@@ -24,6 +24,3 @@ services:
       - type: rewrite
         source: /media/(.*)
         destination: /media/$1
-    disks:
-      - name: media-disk
-        mountPath: /var/media
